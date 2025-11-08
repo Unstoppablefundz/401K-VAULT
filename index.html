@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>401(k) Easy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f0f2f5; text-align: center; }
+    input, button { padding: 12px; margin: 10px; font-size: 16px; width: 80%; }
+    .result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>🧮 401(k) Simulator</h2>
+  <input type="number" id="salary" placeholder="Annual Salary ($)" />
+  <input type="number" id="contrib" placeholder="Contribution % (e.g. 5)" />
+  <input type="number" id="years" placeholder="Years to Retirement" />
+  <button onclick="calc()">Calculate Future Value</button>
+  <div class="result" id="output"></div>
+
+  <script>
+    Telegram.WebApp.ready();
+
+    function calc() {
+      const salary = parseFloat(document.getElementById('salary').value);
+      const contrib = parseFloat(document.getElementById('contrib').value) / 100;
+      const years = parseFloat(document.getElementById('years').value);
+
+      if (!salary || !contrib || !years) {
+        document.getElementById('output').innerHTML = "⚠️ Fill all fields!";
+        return;
+      }
+
+      const annual = salary * contrib;
+      const future = annual * 12 * ((Math.pow(1.07, years) - 1) / 0.07); // 7% growth
+      document.getElementById('output').innerHTML = 
+        `💰 Est. 401(k) in ${years} years: <br>$${future.toLocaleString('en-US', {maximumFractionDigits: 0})}`;
+    }
+  </script>
+</body>
+    </html>
