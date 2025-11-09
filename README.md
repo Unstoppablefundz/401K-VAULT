@@ -1,12 +1,12 @@
 # 401K-VAULT 🧮  
-**Easy & Transparent 401(k) Simulator** — Telegram Mini App
+**Easy & Transparent 401(k) investment Simulator** — Telegram Mini App
 
 ---
 
 ## What It Does
 - Enter salary, % contribution, years → See **future 401(k) value**
 - 7% annual growth (S&P 500 avg)
-- No login. No tracking. Just honest math.
+- Contribute/invest for employee match interest and low fees.
 
 ---
 
