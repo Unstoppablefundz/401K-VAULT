@@ -1,4 +1,4 @@
-# 401K-VAULT 🧮  
+# ⚡ѵault-4∅1k™️
 **Easy & Transparent 401(k) investment Simulator** — Telegram Mini App
 
 ---
