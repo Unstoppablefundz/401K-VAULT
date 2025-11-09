@@ -10,8 +10,8 @@
 
 ---
 
-## Live Demo
-[Open in Telegram](https://t.me/YOUR_BOT_USERNAME) *(replace with your bot name after setup)*
+## Live 
+[Open in Telegram](https://t.me/Growyo401kbot) *(click on live to start)*
 
 ---
 
